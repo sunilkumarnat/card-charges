@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "30c9fe3549da8a346de11d486d817b2d"
-application_url = "https://example.com/"
+application_url = "https://tables-detroit-lessons-planes.trycloudflare.com"
 embedded = true
 name = "Card Charges"
 handle = "card-charges"
@@ -22,7 +22,16 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://tables-detroit-lessons-planes.trycloudflare.com/auth/callback",
+  "https://tables-detroit-lessons-planes.trycloudflare.com/auth/shopify/callback",
+  "https://tables-detroit-lessons-planes.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "kick-start-canada.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
